@@ -1,7 +1,7 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
 //page imports
-import { Login } from "./pages/";
+import { Login, DashboardLayout, Dashboard, Banners } from "./pages/";
 
 const router = createBrowserRouter([
   {
@@ -11,10 +11,26 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Login />,
-      }
+      },
+      {
+        path: "dashboard",
+        element: <DashboardLayout />,
+        children: [
+          {
+            index: true,
+            element: <Dashboard />,
+          },
+          {
+            path: "banners",
+            element: <Banners />
+          },
+        ],
+      },
+
     ],
   }
 ]);
+
 
 function App() {
 

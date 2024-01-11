@@ -9,11 +9,62 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+h1{
+  margin: 10px 0px;
+}
 button{
-  background: #FF9D02;
-    color: #fff;
+    background: #FF9D02;
+    color: #fff !important;
     border-style: none;
     border-radius: 7px;
     padding: 10px 50px;
     cursor: pointer;
+    color: #000;
 }
+
+.dashboard-container{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas: 
+  'header header'
+  'sidebar main';
+}
+
+.page{
+  padding: 20px;
+}
+.page-header{
+  display: flex;
+  align-items:  center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* table styles start  */
+th{
+  background: #000 !important;
+  color: #fff !important;
+  text-align: center !important;
+  
+}
+td{
+  text-align: center !important;
+  max-width: 500px !important;
+  word-wrap: break-word !important;
+}
+
+.ant-pagination .ant-pagination-disabled .ant-pagination-item-link, .ant-pagination .ant-pagination-disabled:hover .ant-pagination-item-link{
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.ant-pagination .ant-pagination-item-active a{
+  color: #000;
+  
+}
+
+.ant-pagination-item-active {
+  border-color: #000 !important;
+}
+
+/* table styles start  */
