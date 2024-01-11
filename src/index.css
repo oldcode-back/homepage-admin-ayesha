@@ -1,0 +1,19 @@
+*{
+  overflow: hidden;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button{
+  background: #FF9D02;
+    color: #fff;
+    border-style: none;
+    border-radius: 7px;
+    padding: 10px 50px;
+    cursor: pointer;
+}
