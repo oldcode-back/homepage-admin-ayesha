@@ -1,6 +1,11 @@
 //antd imports
 import { Space, Table } from 'antd';
-import logo from '../assets/images/logo.svg'
+//image imports
+import logo from '../../assets/images/logo.svg'
+//react imports
+import { Link, useNavigate } from 'react-router-dom';
+//react-icon imports
+import { FiPlus } from "react-icons/fi";
 
 const columns = [
     {
@@ -8,7 +13,12 @@ const columns = [
         dataIndex: 'key',
     },
     {
-        title: 'Banner Image',
+        title: 'Title',
+        dataIndex: 'context',
+        key: 'context',
+    },
+    {
+        title: 'Image',
         key: 'image',
         render: () => (
             <Space size="middle">
@@ -16,17 +26,13 @@ const columns = [
             </Space>
         ),
     },
-    {
-        title: 'Context',
-        dataIndex: 'context',
-        key: 'context',
-    },
+
     {
         title: 'Actions',
         key: 'action',
         render: () => (
             <Space size="middle">
-                <a>Edit</a>
+                <Link to="/dashboard/dining-features/edit-dining-feature">Edit</Link>
                 <a>Delete</a>
             </Space>
         ),
@@ -36,7 +42,7 @@ const data = [
     {
         key: '1',
         name: 'John Brown',
-        context: "qwertyuioiuytrsdfghjkjhgfcvbhnjkmjnbvcv5eydrfgxcvbjhiou8y97tr67etdycghvjbkiu98765rtydcghvjbkiu978r6dtfcghvbjiu  qwertyuioiuytrsdfghjkjhgfcvbhnjkmjnbvcv5eydrfgxcvbjhiou8y97tr67etdycghvjbkiu98765rtydcghvjbkiu978r6dtfcghvbjiuqwertyuioiuytrsdfghjkjhgfcvbhnjkmjnbvcv5eydrfgxcvbjhiou8y97tr67etdycghvjbkiu98765rtydcghvjbkiu978r6dtfcghvbjiu"
+        context: "qwertyuioiuytrsd"
     },
     {
         key: '2',
@@ -50,13 +56,15 @@ const data = [
     },
 ];
 
+const DiningFeatures = () => {
 
-const Banners = () => {
+    const navigate = useNavigate();
+
     return (
         <main className="page">
             <div className="page-header">
-                <h1>Banners</h1>
-                <button>Add banner</button>
+                <h1>Dining Features</h1>
+                <button type='button' onClick={() => navigate('/dashboard/dining-features/add-dining-feature')}><FiPlus className="icon" />Add dining feature</button>
             </div>
 
             <div className='table-div'>
@@ -66,4 +74,4 @@ const Banners = () => {
         </main>
     )
 }
-export default Banners
+export default DiningFeatures

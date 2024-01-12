@@ -1,9 +1,10 @@
 import Styled from 'styled-components'
 
-const Wrapper = Styled.header`
+const Wrapper = Styled.div`
 grid-area: sidebar;
 // height: calc(100vh - 70px);
-// background-color: #000;
+// background-color: blue;
+// transition: all 0.2s;
 .ant-menu{
     height: calc(100vh - 70px);
     border-style: none !important;

@@ -11,7 +11,7 @@ import { RiDashboardLine, RiGalleryLine, RiQuestionAnswerLine } from "react-icon
 import { GrGallery } from "react-icons/gr";
 import { CgWebsite } from "react-icons/cg";
 import { LuMenuSquare } from "react-icons/lu";
-import { MdOutlineRamenDining } from "react-icons/md";
+import { MdOutlineRamenDining, MdOutlineDiscount } from "react-icons/md";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { PiSparkle } from "react-icons/pi";
 import { BiLogOut } from "react-icons/bi";
@@ -30,20 +30,15 @@ function getItem(label, key, icon, children, type) {
 
 const items = [
     getItem('Dashboard', '/dashboard', <RiDashboardLine />),
-
-    // getItem('Blogs', '/blogs', null, [
-    //     getItem('All blog', '/blogs/all-blogs'),
-    //     getItem('Add blog', '/blogs/add-blog'),
-    // ]),
-
     getItem('Banners', 'banners', <RiGalleryLine />),
     getItem('Blogs', 'blogs', <CgWebsite />),
-    getItem('Dining Features', '/dining-features', <MdOutlineRamenDining />),
+    getItem('Offers', 'offers', <MdOutlineDiscount />),
+    getItem('Dining Features', 'dining-features', <MdOutlineRamenDining />),
     getItem('Cuisines', 'cuisines', <LuMenuSquare />),
     getItem('Signature Foods', 'signature-foods', <IoFastFoodOutline />),
     getItem('Other Features', 'other-features', <PiSparkle />),
     getItem('Gallery', 'gallery', <GrGallery />),
-    getItem('Enquire', 'enquire', <RiQuestionAnswerLine />),
+    getItem('Enquiry', 'enquiry', <RiQuestionAnswerLine />),
     getItem("Logout", 'logout', <BiLogOut />)
 ]
 
@@ -69,7 +64,7 @@ const Sidebar = () => {
             <Menu
                 style={{ width: collapsed ? '' : '200px' }}
                 onClick={handleClick}
-                defaultSelectedKeys={["/dashboard"]}
+                // defaultSelectedKeys={["/dashboard"]}
                 mode="inline"
                 inlineCollapsed={collapsed}
                 items={items}

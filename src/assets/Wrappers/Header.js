@@ -10,7 +10,7 @@ justify-content: center;
 position: relative;
 .toggle-div{
     position: absolute;
-    left: 0px;
+    left: 4px;
     top: 20px;
 }
 button{
