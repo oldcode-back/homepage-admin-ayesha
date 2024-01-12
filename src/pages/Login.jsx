@@ -1,16 +1,32 @@
 // styled-component imports 
-import { useState } from "react";
 import Wrapper from "../assets/Wrappers/Login"
-
+//react imports
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 // react-icon imports 
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+//image imports
+import logo from '../assets/images/logo.svg'
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
 
+    const navigate = useNavigate();
+
+    const navigateOnClick = () => {
+        navigate('/dashboard');
+    }
+
     return (
         <Wrapper>
             <form>
+
+                <div className="img-div">
+                    <div className="logo-div">
+                        <img src={logo} alt="" />
+                    </div>
+                </div>
+
                 <div className="form-input">
                     <label htmlFor="username">Username</label>
                     <br />
@@ -28,6 +44,10 @@ const Login = () => {
                 <div className="btn-div">
                     <button type="submit">
                         Login
+                    </button>
+
+                    <button type="button" style={{ marginLeft: "20px" }} onClick={navigateOnClick}>
+                        Explore The App
                     </button>
                 </div>
             </form>

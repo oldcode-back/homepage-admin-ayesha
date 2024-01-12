@@ -8,6 +8,22 @@ align-items: center;
 justify-content: center;
 background:#252525;
 color: #fff;
+.img-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.logo-div{
+    width: 80px;
+    height:80px;
+    img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+}
 form{
     width: 25%;
     padding: 50px;
