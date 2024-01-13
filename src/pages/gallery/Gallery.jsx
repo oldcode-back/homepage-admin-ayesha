@@ -1,7 +1,6 @@
 //antd imports
 import { Space, Table } from 'antd';
-//image imports
-import logo from '../../assets/images/logo.svg'
+
 import avatar2 from '../../assets/images/avatar2.webp'
 //react imports
 import { Link, useNavigate } from 'react-router-dom';

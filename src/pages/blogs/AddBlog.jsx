@@ -6,29 +6,29 @@ import { AiOutlineCloudUpload } from "react-icons/ai";
 //react imports
 import { useNavigate } from 'react-router-dom';
 
-const EditOtherFeature = () => {
+const AddBlog = () => {
 
     const navigate = useNavigate();
 
     return (
         <main className="page">
             <div className="page-header">
-                <h1>Edit Other Feature</h1>
+                <h1>Add Blog</h1>
             </div>
 
 
             <Wrapper>
                 <form>
                     <div className="form-input">
-                        <label htmlFor="featureName">Other Feature Title</label>
+                        <label htmlFor="blogName">Blog Title</label>
                         <br />
-                        <input type="text" placeholder="enter feature title" id="featureName" />
+                        <input type="text" placeholder="enter blog title" id="blogName" />
                     </div>
 
                     <div className="form-input">
-                        <label htmlFor="featureContent">Other Feature Content</label>
+                        <label htmlFor="blogContent">Blog Content</label>
                         <br />
-                        <textarea type="text" placeholder="enter feature content" id="featureContent" rows="6" />
+                        <textarea type="text" placeholder="enter blog content" id="blogContent" rows="6" />
                     </div>
 
                     <div className="form-input">
@@ -45,11 +45,11 @@ const EditOtherFeature = () => {
 
                     <div className='form-buttons'>
                         <button type='submit'>Submit</button>
-                        <button type='button' className='cancel-btn' onClick={() => navigate('/dashboard/other-features')}>Cancel</button>
+                        <button type='button' className='cancel-btn' onClick={() => navigate('/dashboard/blogs')}>Cancel</button>
                     </div>
                 </form>
             </Wrapper>
         </main>
     )
 }
-export default EditOtherFeature
+export default AddBlog
