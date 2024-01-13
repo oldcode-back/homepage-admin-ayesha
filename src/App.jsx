@@ -1,7 +1,7 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
 //page imports
-import { Login, DashboardLayout, Dashboard, Banners, AddBanner, EditBanner, DiningFeatures, EditDiningFeature, AddDiningFeature, Cuisines, AddCuisine, EditCuisine, SignatureFoods, AddSignatureFood, EditSignatureFood, OtherFeatures, AddOtherFeature, EditOtherFeature, Offers, AddOffer, EditOffer, Gallery, AddGalleryImage, EditGalleryImage, Enquiries, Error } from "./pages/";
+import { Login, DashboardLayout, Dashboard, Banners, AddBanner, EditBanner, DiningFeatures, EditDiningFeature, AddDiningFeature, Cuisines, AddCuisine, EditCuisine, SignatureFoods, AddSignatureFood, EditSignatureFood, OtherFeatures, AddOtherFeature, EditOtherFeature, Offers, AddOffer, EditOffer, Gallery, AddGalleryImage, EditGalleryImage, Enquiries, Error, Blogs, AddBlog, EditBlog } from "./pages/";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +36,24 @@ const router = createBrowserRouter([
               {
                 path: "edit-banner",
                 element: <EditBanner />,
+              },
+            ],
+          },
+          {
+            path: "blogs",
+            element: <Outlet />,
+            children: [
+              {
+                index: true,
+                element: <Blogs />,
+              },
+              {
+                path: "add-blog",
+                element: <AddBlog />,
+              },
+              {
+                path: "edit-blog",
+                element: <EditBlog />,
               },
             ],
           },

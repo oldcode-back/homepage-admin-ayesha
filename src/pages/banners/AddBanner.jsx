@@ -1,7 +1,7 @@
 //styled-component imports
 import Wrapper from '../../assets/Wrappers/Form';
 //antd imports
-import { Select, Button, Upload } from 'antd';
+import { Button, Upload } from 'antd';
 import { AiOutlineCloudUpload } from "react-icons/ai";
 //react imports
 import { useNavigate } from 'react-router-dom';
@@ -49,40 +49,8 @@ const AddBanner = () => {
                         <input type="text" placeholder="enter banner title" id="bannerName" />
                     </div>
 
-                    {/* <div className="form-input">
-                        <label htmlFor="bannerId">Banner No.</label>
-                        <br />
-                        <Select
-                            defaultValue="lucy"
-                            style={{
-                                width: 120,
-                            }}
-                            onChange={handleChange}
-                            options={[
-                                {
-                                    value: 'disabled',
-                                    label: 'select banner id',
-                                    disabled: true,
-                                },
-                                {
-                                    value: '1',
-                                    label: '1',
-                                },
-                                {
-                                    value: '2',
-                                    label: '2',
-                                },
-                                {
-                                    value: '3',
-                                    label: '3',
-                                },
-
-                            ]}
-                        />
-                    </div> */}
-
                     <div className="form-input">
-                        <label htmlFor="bannerUpload">Upload upto 4 Banner Images</label>
+                        <label htmlFor="bannerUpload">Upload Banner Image</label>
                         <br />
                         <Upload
                             action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"

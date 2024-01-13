@@ -20,15 +20,15 @@ const AddOtherFeature = () => {
             <Wrapper>
                 <form>
                     <div className="form-input">
-                        <label htmlFor="featureName">Other feature Title</label>
+                        <label htmlFor="featureName">Other Feature Title</label>
                         <br />
                         <input type="text" placeholder="enter feature title" id="featureName" />
                     </div>
 
                     <div className="form-input">
-                        <label htmlFor="featureName">Other Feature Content</label>
+                        <label htmlFor="featureContent">Other Feature Content</label>
                         <br />
-                        <textarea type="text" placeholder="enter feature title" id="featureName" rows="6" />
+                        <textarea type="text" placeholder="enter feature content" id="featureContent" rows="6" />
                     </div>
 
                     <div className="form-input">

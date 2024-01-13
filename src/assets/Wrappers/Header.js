@@ -18,7 +18,7 @@ button{
     display: flex;
     align-items: center;
     margin: 0px !important;
-    color: #fff;
+    color: #fff !important;
     background-color: transparent;
     border: none;
 }
