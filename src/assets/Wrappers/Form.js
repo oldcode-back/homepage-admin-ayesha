@@ -7,7 +7,7 @@ align-items: center;
 justify-content: center;
 padding: 20px;
 form{
-    width: 50%;
+    width: 70%;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 1px 1px 3px 3px rgba(0,0,0, 0.2);
@@ -36,6 +36,9 @@ input:focus{
 input:hover{
     border: 1px solid #FF9D02;
 }
+input::placeholder{
+     color:  #dcdcdc !important;
+}
 textarea{
     width: 97%;
     padding: 10px 0px 10px 10px;
@@ -55,6 +58,7 @@ textarea:hover{
 .ant-upload{
     width: 100%;
 }
+
 .upload-btn{
     width: 100%;
     height: 100px;
@@ -66,6 +70,37 @@ textarea:hover{
     margin-top: 10px;
     border: 1px solid #000;
 }
+// .upload-input{
+//     width: 100%;
+//     height: 46px;
+//     margin-top: 10px;
+// }
+.ant-space-item{
+    width: 100%;
+}
+.ant-form-item {
+    margin-bottom: 0px;
+}
+.minus-div{
+    // width:60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 15px;
+    cursor: pointer;
+    // margin-top: 30px;
+}
+.minus-circle{
+    color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+}
 .upload-btn:hover{
     color: #FF9D02 !important;
     border: 1px solid #FF9D02 !important;
@@ -76,6 +111,10 @@ textarea:hover{
 .cancel-btn{
     background: #000;
     margin-left: 20px;
+}
+.add-more-btn{
+    color: #000 !important;
+    margin-bottom: 30px;
 }
 `;
 
